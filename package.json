@@ -1,0 +1,24 @@
+{
+  "name": "weak-acid-titration-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local backend for weak-acid titration equilibrium and pH-curve analysis (ideal dilute solutions).",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node --experimental-sqlite src/api/server.ts",
+    "demo": "node --experimental-sqlite scripts/demo.ts",
+    "cli": "node --experimental-sqlite src/cli/cli.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-sqlite --test --test-reporter=spec test/*.test.ts",
+    "clean": "powershell -ExecutionPolicy Bypass -File scripts/stop-and-clean.ps1"
+  },
+  "dependencies": {
+    "@types/node": "^26.6.3"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
