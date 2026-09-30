@@ -1,0 +1,21 @@
+{
+  "name": "weak-acid-titration-backend",
+  "version": "1.0.0",
+ "private": true,
+  "type": "module",
+  "description": "Windows-local teaching backend for weak-acid titration equilibrium and pH curves (TypeScript + Node.js + SQLite)",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "test": "node --test --experimental-sqlite tests/equilibrium.test.ts tests/mix.test.ts tests/db.test.ts tests/api.test.ts tests/cli.test.ts",
+    "start": "node --experimental-sqlite src/api/server.ts",
+    "cli": "node --experimental-sqlite src/cli/cli.ts",
+    "demo": "node --experimental-sqlite src/demo/run-demo.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.5.0"
+  }
+}
